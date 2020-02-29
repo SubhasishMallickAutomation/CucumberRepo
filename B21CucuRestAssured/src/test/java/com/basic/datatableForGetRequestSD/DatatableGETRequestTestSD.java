@@ -46,7 +46,7 @@ public class DatatableGETRequestTestSD {
 				String path = data.get(i).get(0);
 				String value = data.get(i).get(1);
 				String actualLiming = res.body().jsonPath().getString(path);
-				Assert.assertTrue(actualLiming.equals(value));
+				Assert.assertTrue("expected value:"+value+" and actual is ="+actualLiming,actualLiming.equals(value));
 		}
 		
 		
